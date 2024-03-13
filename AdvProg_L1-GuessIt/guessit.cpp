@@ -51,9 +51,9 @@ string getAnswer(int number, int randomNumber) {
               If number is equal randomNumber, the answer is "Congratulation! You win."
     ***/
     string answer;
-       if(number>randomNumber){answer="Your number is higher."};
-       else if(number<randomNumber){answer="Your number is lower."};
-       else if(number==randomNumber){answer="Congratulation! You win."};
+       if(number>randomNumber){answer="Your number is higher.";}
+       else if(number<randomNumber){answer="Your number is lower.";}
+       else if(number==randomNumber){answer="Congratulation! You win.";}
     return answer;
 }
 
@@ -66,20 +66,16 @@ string getAnswer(int number, int randomNumber) {
 ***/
 bool checkSuccess(string answer) {
     // TODO: return the result after checking that player guessed right or wrong
-      answer=string getAnswer(int number, int randomNumber);
-      if (answer="Your number is higher."||answer="Your number is lower.")return false;
-      
-      return true;
+      if(answer="Congratulation! You win.")
+       {
+       return true;}
+       else {
+       
+       return false;}
 }
 
-char getPlayerOpinion() {
-    // TODO: Ask the player about continue playing and return the player's choice
-    char isContinued;
-    cout<<"Do you want to play continue?(Yes or No)"<<endl;
-    cin>>isContinued;
 
-    return isContinued;
-}
+
 /***
     Args:
         isContinued (char): player's choice
@@ -89,8 +85,9 @@ char getPlayerOpinion() {
 bool checkContinuePlaying(char isContinued) {
     // TODO: return result after checking player continue playing or not
     bool result = false;
-    if(isContinued=="Yes") result= true;
-
+    if(isContinued=="Yes") {
+    result= true;}
+    
     return result;
 }
 
@@ -100,7 +97,14 @@ bool checkContinuePlaying(char isContinued) {
         
     Returns:
         isContinues (char) : player's choice (continue playing or not)
-***/
+***/char getPlayerOpinion() {
+    // TODO: Ask the player about continue playing and return the player's choice
+    char isContinued;
+    cout<<"Do you want to continue playing?(Yes or No)"<<endl;
+    cin>>isContinued;
+
+    return isContinued;
+}
 
 
 

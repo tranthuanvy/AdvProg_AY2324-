@@ -53,8 +53,8 @@ vector<string> readWordListFromFile(const string& filePath)
 bool isCharInWord(const char ch, const string& word)
 {
     // TODO: return true if ch is in word else return false
-    for(int i=0;i<work.size();i++){
-    	if(c==ch){ return true;
+    for(int i=0;i<word.size();i++){
+    	if(word[i]==ch){ return true;
     	}
     }
     return false;
@@ -72,13 +72,11 @@ string chooseWordFromList(const vector<string>& wordList, int index)
     // TODO: Return a lowercase word in the index position of the vector wordList.
     string answer;
     answer=wordList[index];
-    if(index>=0&&index<wordlist.size()){
+    if(index>=0&&index<wordList.size()){
     	return answer;
     }else{
     	return"";
     }
-
-    
 }
 
 /***
@@ -167,11 +165,11 @@ void processData(const char ch, const string& word,
             update incorrectChars: call updateEnteredChars() function
     ***/
     if(isCharInWord( ch,  word)==true){updateSecretWord(secretWord,  ch,  word);
-    updateEnteredChars( ch,  chars);
+    updateEnteredChars( ch, correctchars);
     
     	
     }else{updateIncorrectGuess( incorrectGuess);
-    updateEnteredChars( ch,  chars);
+    updateEnteredChars( ch,  incorrectchars);
     	
     }
 }
