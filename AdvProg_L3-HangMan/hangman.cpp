@@ -117,7 +117,7 @@ void updateSecretWord(string& secretWord, const char ch, const string& word)
      if (secretWord.size() != word.size()) {
          return;
     }
-	for(int i=0;i<word.size();i++){
+	for(int i=0;i<word.size();i++){ 
     	if(word[i]==ch&& secretWord[i] != ch){
     	secretWord[i]=ch;}
     }
