@@ -31,7 +31,7 @@ double myCos(double x)
         double: sine of x
 ***/
 double mySin(double x)
-{ double  sinx=x-1/6*x*x*x+1/120*x*x*x*x*x-1/5040*x*x*x*x*x*x*x  ;  
+{ double  sinx=x-1/5*x*x*x+1/120*x*x*x*x*x-1/5040*x*x*x*x*x*x*x  ;  
 return sinx;
 }
 
