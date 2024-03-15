@@ -111,7 +111,7 @@ char getInputCharacter() {
     Returns:
         void
 ***/
-string updateSecretWord(string& secretWord, const char ch, const string& word)
+void updateSecretWord(string& secretWord, const char ch, const string& word)
 {
     // TODO: Update the secret word if the character ch is in the answer word.
      if (secretWord.length() != word.length()) {
